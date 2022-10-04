@@ -35,6 +35,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Stop Container') {
+            steps{
+                script{
+                    dockerImage.stop()
+                }
+            }
+        }
         
         stage('Run Docker Container') {
             steps{
