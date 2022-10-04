@@ -1,7 +1,7 @@
 pipeline {
 
     environment {
-        dockerimagename = "maarcoalr/tekever_challenge"
+        dockerimagename = "maarcoalr/portfolio2"
         dockerImage = ""
     }
 
@@ -10,7 +10,7 @@ pipeline {
     stages{
         stage('Fetch code') {
             steps {
-                git branch: 'main', url: 'https://github.com/hammer182/tekever-challenge'
+                git branch: 'main', url: 'https://github.com/hammer182/portfolio.git'
             }
         }
 
