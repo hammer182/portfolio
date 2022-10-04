@@ -39,7 +39,7 @@ pipeline {
         stage('Run Docker Container') {
             steps{
                 script{
-                    dockerImage.run('--name portfolio -p 80:80')
+                    dockerImage.run('-p 80:80 --name portfolio')
                 }
             }
         }        
